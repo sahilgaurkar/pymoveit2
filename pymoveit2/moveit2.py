@@ -49,7 +49,7 @@ class MoveIt2:
         execute_via_moveit: bool = False,
         ignore_new_calls_while_executing: bool = False,
         callback_group: Optional[CallbackGroup] = None,
-        follow_joint_trajectory_action_name: str = "joint_trajectory_controller/follow_joint_trajectory",
+        follow_joint_trajectory_action_name: str = "baxter_joint_trajectory_controller/follow_joint_trajectory",
     ):
         """
         Construct an instance of `MoveIt2` interface.
