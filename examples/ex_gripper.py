@@ -13,7 +13,7 @@ from rclpy.callback_groups import ReentrantCallbackGroup
 from rclpy.node import Node
 
 from pymoveit2 import MoveIt2Gripper
-from pymoveit2.robots import panda
+from pymoveit2.robots import baxter
 
 
 def main():
