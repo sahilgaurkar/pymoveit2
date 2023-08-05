@@ -25,7 +25,7 @@ class MoveIt2Gripper(MoveIt2):
         skip_planning: bool = False,
         skip_planning_fixed_motion_duration: float = 0.5,
         callback_group: Optional[CallbackGroup] = None,
-        follow_joint_trajectory_action_name: str = "gripper_trajectory_controller/follow_joint_trajectory",
+        follow_joint_trajectory_action_name: str = "baxter_joint_trajectory_controller/follow_joint_trajectory",
     ):
         """
         Construct an instance of `MoveIt2Gripper` interface.
