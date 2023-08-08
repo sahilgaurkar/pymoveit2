@@ -22,7 +22,7 @@ class MoveIt2Gripper(MoveIt2):
         gripper_group_name: str = "gripper",
         execute_via_moveit: bool = False,
         ignore_new_calls_while_executing: bool = False,
-        skip_planning: bool = False,
+        skip_planning: bool = True,
         skip_planning_fixed_motion_duration: float = 0.5,
         callback_group: Optional[CallbackGroup] = None,
         follow_joint_trajectory_action_name: str = "baxter_joint_trajectory_controller/follow_joint_trajectory",

@@ -3,7 +3,7 @@ from typing import List
 MOVE_GROUP_ARM: str = "left_arm"
 MOVE_GROUP_GRIPPER: str = "left_hand"
 
-OPEN_GRIPPER_JOINT_POSITIONS: List[float] = [0.04, 0.04]
+OPEN_GRIPPER_JOINT_POSITIONS: List[float] = [0.020833, -0.020833]
 CLOSED_GRIPPER_JOINT_POSITIONS: List[float] = [0.0, 0.0]
 
 
@@ -29,6 +29,6 @@ def end_effector_name(prefix: str = "left_") -> str:
 
 def gripper_joint_names(prefix: str = "l_") -> List[str]:
     return [
-        prefix + "gripper_l_finger_joint ",
+        prefix + "gripper_l_finger_joint",
         prefix + "gripper_r_finger_joint",
     ]
