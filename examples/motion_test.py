@@ -44,7 +44,7 @@ class MoveitService(Node):
                 end_effector_name=baxter_left.end_effector_name(),
                 group_name=baxter_left.MOVE_GROUP_ARM,
                 callback_group=callback_group,
-                execute_via_moveit=True,
+                execute_via_moveit=False,
             )
         elif arm == 'right':
             moveit2 = MoveIt2(
@@ -54,7 +54,7 @@ class MoveitService(Node):
                 end_effector_name=baxter_right.end_effector_name(),
                 group_name=baxter_right.MOVE_GROUP_ARM,
                 callback_group=callback_group,
-                execute_via_moveit=True,
+                execute_via_moveit=False,
             )
         else:
             response.success = False
