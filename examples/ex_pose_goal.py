@@ -11,7 +11,8 @@ from rclpy.callback_groups import ReentrantCallbackGroup
 from rclpy.node import Node
 
 from pymoveit2 import MoveIt2
-from pymoveit2.robots import baxter
+from pymoveit2.robots import baxter_left
+from pymoveit2.robots import baxter_right
 
 
 def main():
@@ -31,10 +32,10 @@ def main():
     # Create MoveIt 2 interface
     moveit2 = MoveIt2(
         node=node,
-        joint_names=baxter.joint_names(),
-        base_link_name=baxter.base_link_name(),
-        end_effector_name=baxter.end_effector_name(),
-        group_name=baxter.MOVE_GROUP_ARM,
+        joint_names=baxter_left.joint_names(),
+        base_link_name=baxter_left.base_link_name(),
+        end_effector_name=baxter_left.end_effector_name(),
+        group_name=baxter_left.MOVE_GROUP_ARM,
         callback_group=callback_group,
         execute_via_moveit = True,
 

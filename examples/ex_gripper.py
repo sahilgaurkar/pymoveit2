@@ -13,7 +13,8 @@ from rclpy.callback_groups import ReentrantCallbackGroup
 from rclpy.node import Node
 
 from pymoveit2 import MoveIt2Gripper
-from pymoveit2.robots import baxter
+from pymoveit2.robots import baxter_left
+from pymoveit2.robots import baxter_right
 
 
 def main():
@@ -34,10 +35,10 @@ def main():
     # Create MoveIt 2 gripper interface
     moveit2_gripper = MoveIt2Gripper(
         node=node,
-        gripper_joint_names=baxter.gripper_joint_names(),
-        open_gripper_joint_positions=baxter.OPEN_GRIPPER_JOINT_POSITIONS,
-        closed_gripper_joint_positions=baxter.CLOSED_GRIPPER_JOINT_POSITIONS,
-        gripper_group_name=baxter.MOVE_GROUP_GRIPPER,
+        gripper_joint_names=baxter_left.gripper_joint_names(),
+        open_gripper_joint_positions=baxter_left.OPEN_GRIPPER_JOINT_POSITIONS,
+        closed_gripper_joint_positions=baxter_left.CLOSED_GRIPPER_JOINT_POSITIONS,
+        gripper_group_name=baxter_left.MOVE_GROUP_GRIPPER,
         callback_group=callback_group,
     )
 

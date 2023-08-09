@@ -4,6 +4,7 @@ project(pymoveit2)
 # Find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(ament_cmake_python REQUIRED)
+find_package(opencv_interfaces REQUIRED)
 
 # Install Python package
 ament_python_install_package(pymoveit2)
@@ -17,6 +18,7 @@ install(PROGRAMS
     ${EXAMPLES_DIR}/ex_joint_goal.py
     ${EXAMPLES_DIR}/ex_pose_goal.py
     ${EXAMPLES_DIR}/ex_servo.py
+    ${EXAMPLES_DIR}/motion_test.py
     DESTINATION lib/${PROJECT_NAME}
 )
 
