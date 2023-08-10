@@ -672,7 +672,7 @@ class MoveIt2:
         self,
         joint_state: Optional[Union[JointState, List[float]]] = None,
         fk_link_names: Optional[List[str]] = None,
-        wait_for_server_timeout_sec: Optional[float] = 1.0,
+        wait_for_server_timeout_sec: Optional[float] = 10.0,
     ) -> Optional[PoseStamped]:
         """
         Compute forward kinematics for all `fk_link_names` in a given `joint_state`.
@@ -726,7 +726,7 @@ class MoveIt2:
         quat_xyzw: Union[Quaternion, Tuple[float, float, float, float]],
         start_joint_state: Optional[Union[JointState, List[float]]] = None,
         constraints: Optional[Constraints] = None,
-        wait_for_server_timeout_sec: Optional[float] = 1.0,
+        wait_for_server_timeout_sec: Optional[float] = 10.0,
     ) -> Optional[JointState]:
         """
         Compute inverse kinematics for the given pose. To indicate beginning of the search space,
